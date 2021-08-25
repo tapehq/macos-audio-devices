@@ -1,6 +1,6 @@
 {
   "name": "@tapehq/macos-audio-devices",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Get, set and configure the audio devices on macOS",
   "repository": "git://github.com/tapehq/macos-audio-devices.git",
   "funding": "https://github.com/sponsors/karaggeorge",
