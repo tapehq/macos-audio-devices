@@ -21,7 +21,7 @@
   ],
   "scripts": {
     "test": "xo && tsd",
-    "build": "swift build --configuration=release && mv .build/release/audio-devices .",
+    "build": "swift build --configuration=release && mv .build/release/audio-devices . && install_name_tool -delete_rpath /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx audio-devices",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

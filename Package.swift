@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
 	name: "audio-devices",
 	platforms: [
-		.macOS(.v10_12)
+        .macOS(.v10_14)
 	],
 	dependencies: [
 		.package(url: "https://github.com/jakeheis/SwiftCLI", from: "6.0.0")
