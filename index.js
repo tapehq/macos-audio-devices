@@ -1,9 +1,11 @@
 'use strict';
 const path = require('path');
 const execa = require('execa');
-const electronUtil = require('electron-util/node');
 
-const binary = path.join(electronUtil.fixPathForAsarUnpack(__dirname), 'audio-devices');
+const isAsar = __dirname.includes('.asar');
+const asarDir = process.arch === 'arm64' ? 'app-arm64.asar' : 'app-x64.asar';
+const asarDirname = isAsar ? __dirname.replace(asarDir, `${asarDir}.unpacked`) : __dirname;
+const binary = path.join(asarDirname, 'audio-devices');
 
 const generateExport = (name, getArgs, callback) => {
   module.exports[name] = async (...inputs) => {
